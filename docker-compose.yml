@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  docgpt:
+    image: kroschu/llm-pdf-arm64
+    container_name: llm-pdf-llm
+    restart: always
+    ports:
+      - '8502:8501'

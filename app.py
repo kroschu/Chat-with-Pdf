@@ -49,10 +49,13 @@ if uploaded_file is not None:
 
 # Set APIkey for OpenAI Service
 # Can sub this out for other LLM providers
-os.environ['OPENAI_API_KEY'] = # Your OpenAI API Key
+# os.environ['OPENAI_API_KEY'] = # Your OpenAI API Key
 
 # Create instance of OpenAI LLM
-llm = OpenAI(temperature=0.1, verbose=True)
+llm = OpenAI(openai_api_base="https://apigptfree.rmrf.pp.ua/v1", 
+                 openai_api_key="sk-foagi5JAcLUfX1DTuaNWourPmaPwzFODKoLaj4Up2Lc3CegC", 
+                 temperature=0.1,
+                 streaming=True)
 embeddings = OpenAIEmbeddings()
 
 # Create and load PDF Loader
