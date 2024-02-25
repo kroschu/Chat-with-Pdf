@@ -6,4 +6,4 @@ services:
     container_name: llm-pdf-llm
     restart: always
     ports:
-      - '8502:8501'
+      - '8501:8501'
